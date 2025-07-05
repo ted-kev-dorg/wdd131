@@ -16,23 +16,25 @@
 
   .header-content{
     padding:30px;
-    background-color: #264653;
+    background-color: #34C6B1;
 
   }
   
   
   .middle-field {
-    background: #E9C46A;
+    background: #FFF8DC;
+    padding: 2rem;
     grid-column: 1 / 2;
   }
   
   .right-sidebar {
-    background: #F4A261;
+    background: #FFFFFf;
+    padding: 2rem;
     grid-column: 2 / 3;
   }
   
   footer {
-    background: #E76F51;
+    background: #34C6B1;
     padding: 2rem;
     text-align: center;
     grid-column: 1 / 3;
@@ -52,7 +54,7 @@ body {
 	list-style: none;
 	display: flex;
 	flex-wrap: wrap;
-	background-color: #2A9D8F;
+	background-color: #0f0f0f;
 	align-items: center;
 }
 .navigation li {
