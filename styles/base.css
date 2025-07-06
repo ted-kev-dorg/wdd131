@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap'); */
 
 * {
   margin: 0;
@@ -8,6 +8,7 @@
 
 body {
   font-family: 'Roboto', Arial, sans-serif;
+  /* height: 100vh; */
 }
 
 /* Course title styling */
@@ -51,7 +52,7 @@ body {
 
 /* Limit main width and center it horizontally */
 .main-content {
-  max-width: 1200px;         /* set your desired limit */
+  max-width: 1200px;       
   margin: 0 auto;            /* center horizontally */
   padding: 1rem;
   box-sizing: border-box;
@@ -85,7 +86,7 @@ h1 {
 
 /* Shared styling for card section titles */
 .card-title {
-  background-color: #4CAF50; 
+  background-color: #388E3C; 
   color: white;
   padding: 0.5rem;
   margin-bottom: 1rem;
@@ -128,10 +129,11 @@ h1 {
 
 /* Article titles inside each article */
 .article-title {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
   font-weight: bold;
-  text-align: center;   
+  text-align: center;
+  border-bottom: 2px solid #ccc;  /* horizontal line */   
 }
 
 /* Web resources list styling */
@@ -146,7 +148,7 @@ h1 {
 }
 
 .resources-list a {
-  color: #007BFF;
+  color: #0056b3;
   text-decoration: none;
 }
 
@@ -156,10 +158,14 @@ h1 {
 
 /* Footer styling */
 footer {
-  background-color: #333;
-  color: white;
+  /* background-color: #333; */
+  color: Black;
   text-align: center;
   padding: 1rem;
   margin-top: 2rem;
   background-color: #34C6B1;
+}
+
+footer p {
+  padding-bottom: 1rem;
 }
