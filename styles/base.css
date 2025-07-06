@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+/* Course title styling */
+#course-title {
+  display: block;
+  text-align: center;
+  font-size: 2rem;
+  background-color: #34C6B1;
+}
+
+/* Navigation styling */
+.navigation {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #333;
+  align-items: center;
+}
+
+.navigation li {
+  flex: 1 1 auto;
+}
+
+.navigation a {
+  display: block;
+  color: #eee;
+  padding: 0.75rem;
+  text-decoration: none;
+  text-align: center;
+}
+
+.navigation a:hover {
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: yellow;
+}
+
+.navigation a:visited {
+  color: #ccc;
+}
+
+/* Limit main width and center it horizontally */
+.main-content {
+  max-width: 1200px;         /* set your desired limit */
+  margin: 0 auto;            /* center horizontally */
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* Layout main column cards with CSS Grid */
+.main-sections-container {
+  display: grid;
+  grid-template-columns: 1fr auto;  /* two columns side by side */
+  gap: 2rem;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Responsive: stack the cards vertically on smaller screens */
+@media (max-width: 800px) {
+  .main-sections-container {
+    grid-template-columns: 1fr;    /* one column, stacking cards */
+  }
+}
+
+/* Card styling */
+.card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* Shared styling for card section titles */
+.card-title {
+  background-color: #4CAF50; 
+  color: white;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Container for the two articles in the first card */
+.card-articles-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Flex layout inside each article */
+.article-flex .article-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* About Me article: paragraph left, image right */
+.about-text-left p {
+  order: 1;
+}
+
+.about-text-left img {
+  order: 2;
+  max-width: 20%;
+}
+
+/* Resources article: image left, paragraph right */
+.resources-image-left img {
+  order: 1;
+  max-width: 20%;
+}
+
+.resources-image-left p {
+  order: 2;
+}
+
+/* Article titles inside each article */
+.article-title {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-align: center;   
+}
+
+/* Web resources list styling */
+.resources-list {
+  list-style: none;
+  padding: 0;
+  /* text-align: center; */
+}
+
+.resources-list li {
+  margin-bottom: 0.5rem;
+}
+
+.resources-list a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.resources-list a:hover {
+  text-decoration: underline;
+}
+
+/* Footer styling */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  background-color: #34C6B1;
+}

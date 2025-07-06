@@ -3,9 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kevin Tetede-Test Page</title>
+    <title>WDD 131 - Dynamic Web Fundamentals - Kevin D. Tetede</title>    
+    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals. This page is created by Kevin D. Tetede, showcasing the fundamentals of dynamic web development including HTML, CSS, and JavaScript.">
+    <meta name="author" content="Kevin D. Tetede">
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
 </head>
-<body>
+<body>    
+    <header>
+        <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+        <nav >                
+            <ul class = "navigation">
+                <li><a href="https://www.linkedin.com/in/kevintetede/">LinkedIn</a></li>
+                <li><a href="https://byupw.instructure.com/">Canvas</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/2?lang=eng&id=p41-note41d_p1#p41">Scripture</a></li>
+                <li><a href="#">Final Project</a></li>                    
+            </ul>                
+        </nav>
+    </header>   
+
+    <main class="main-content">
+        <h1>Kevin D. Tetede</h1>
+        <div class="main-sections-container">
+            <section class="card card-about">
+                <h2 class="card-title">About Me</h2>
+                <div class="card-articles-container">
+                    <article class="about-me article-flex">
+                        <!-- <h3 class="article-title">About Me</h3> -->
+                        <div class="article-content about-text-left">
+                            <p>My name is Kevin Tetede Dorgeles. I was born in Ivory Coast and currently live in Canada. I am working in the technology and customer service field. My family is very important to me, and I enjoy spending quality time with them. I have a passion for learning new skills and exploring different cultures. I also love traveling and meeting new people wherever I go.</p>
+                            <img src="images/profile-picture.jpg" alt="Kevin's profile picture">
+                        </div>
+                    </article>  
+
+                    <article class="resources article-flex">
+                        <h3 class="article-title">Kevin, Ivory Coast</h3>
+                        <div class="article-content resources-image-left">
+                            <img src="images/ivory-coast-flag.png" alt="Ivory Coast Flag">
+                            <p>Ivory Coast, also known as Côte d’Ivoire, is located in West Africa along the Atlantic Ocean. It is known for its vibrant culture, diverse landscapes, and rich biodiversity. The country is the world’s largest producer of cocoa beans and is famous for its stunning beaches, tropical forests, and lively cities like Abidjan and Yamoussoukro. Ivory Coast is also home to unique wildlife and several UNESCO World Heritage sites, making it a fascinating destination to explore.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="card card-resources">
+                <h2 class="card-title">Web Dev Resources</h2>
+                <ul class="resources-list">                    
+                    <li><a href="https://www.w3schools.com/">W3Schools</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a></li>
+                    <li><a href="https://www.freecodecamp.org/">freeCodeCamp</a></li>
+                    <li><a href="https://www.codecademy.com/">Codecademy</a></li>
+                    <li><a href="https://www.udemy.com/">Udemy</a></li>
+                    <li><a href="https://www.coursera.org/">Coursera</a></li>
+                    <li><a href="https://www.khanacademy.org/computing/computer-programming">Khan Academy</a></li>
+                    <li><a href="https://www.youtube.com/">YouTube</a></li>
+                    <li><a href="https://www.stackoverflow.com/">Stack Overflow</a></li>
+                </ul>
+            </section>
+        </div> 
+    </main>
+                
+    <footer>
+        <p>&copy;<span id="currentyear"></span> Kevin Dorgeles Tetede - Ivory Coast</p>
+        <p id="lastModified"> </p>
+    </footer>
     
 </body>
 </html>
