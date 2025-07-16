@@ -17,14 +17,10 @@
     gap: 20px;
      }
 
-    /* .navigation {
-        flex-direction: row; /* horizontal nav on large screens */
-        /* gap: 20px; */
-    /* } */ */
-
+    
     .navigation.open {
         display: flex;
-     }
+    }
     
     
     #title {
