@@ -5,12 +5,7 @@
     header {
         flex-direction: row;
         justify-content: space-between;
-    }
-
-    body {
-        font-family: 'Roboto', Arial, sans-serif;
- 
-    }
+    }   
 
     #menu {
     display: none; /* hide hamburger on large screens */
