@@ -1,0 +1,33 @@
+/* ========================
+   Media Query for Large Screens
+   ======================== */
+@media screen and (min-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #menu {
+    display: none; /* hide hamburger on large screens */
+    }
+
+    .navigation {
+    display: flex !important; /* always show nav */
+    flex-direction: row;
+    gap: 20px;
+     }
+
+    /* .navigation {
+        flex-direction: row; /* horizontal nav on large screens */
+        /* gap: 20px; */
+    /* } */ */
+
+    .navigation.open {
+        display: flex;
+     }
+    
+    
+    #title {
+        margin-bottom: 0;
+    }
+}
