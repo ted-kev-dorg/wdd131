@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Dynamic Web Fundamentals - Kevin D. Tetede</title>    
+    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals. This page is created by Kevin D. Tetede, showcasing the fundamentals of dynamic web development including HTML, CSS, and JavaScript.">
+    <meta name="author" content="Kevin D. Tetede">
+    <!-- Preconnect to Google Fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Google Fonts reference -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Ivory Coast</h1>
+  </header>
+
+  <main>
+    <picture>
+      <source srcset="images/elephant-small.webp" media="(max-width: 600px)" />
+      <source srcset="images/elephant-medium.webp" media="(max-width: 1200px)" />
+      <img src="images/elephant-large.webp" alt="Elephants in Ivory Coast" width="100%" height="auto" />
+    </picture>
+
+    <section class="data">
+        <h2>Data</h2>
+        <div class="info">
+            <div><span>Area:</span> <span>322,463 sq km</span></div>
+            <div><span>Population:</span> <span>26,378,274</span></div>
+            <div><span>Capital:</span> <span>Yamoussoukro</span></div>
+            <div><span>Languages:</span> <span>French</span></div>
+            <div><span>Currency:</span> <span>West African CFA franc</span></div>
+            <div><span>Time Zone:</span> <span>UTC</span></div>
+            <div><span>Calling Code:</span> <span>+225</span></div>
+            <div><span>Internet TLD:</span> <span>.ci</span></div>
+        </div>
+    </section>
+    <hr>
+    <section class="weather">
+        <h2>Weather</h2>
+        <img src="images/weather.svg" alt="Partly Cloudy Icon" class="weather-icon-mobile"  />
+        <div class="info">
+            <div><span>Temperature:</span> <span id="temp">26°C</span></div>
+            <div><span>Conditions:</span> <span>Partly Cloudy</span></div>
+            <div><span>Wind:</span> <span id="wind">15 km/h</span></div>
+            <div><span>Wind Chill:</span> <span id="windchill">N/A</span></div>
+        </div>
+    </section>    
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> 🌸 Kevin Dorgeles Tetede 🌸 Ivory Coast</p>
+    <p>Last Modification: <span id="lastModified"></span></p>
+  </footer>
+</body>
+</html>
