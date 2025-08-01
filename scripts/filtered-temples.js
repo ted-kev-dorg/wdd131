@@ -101,7 +101,7 @@ const temples = [
 
 
 function cardGenerator (temple) {
-	return `<div>
+	return `<div >
 				<h1>${temple.templeName}</h1>
 				<p><span>Location:</span> ${temple.location}</p>
 				<p><span>Dedicated:</span> ${temple.dedicated}</p>
