@@ -1,0 +1,131 @@
+/* css/styles.css */
+:root {
+  --primary-color:#0A2538;
+  --background-color: #cceaff;
+  --text-color: #333;
+  --text-color-white: #f9f9f9;
+  --text-highlight-color: #80004a;
+  --border-color: #ccc;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 1rem;
+  background: var(--text-color-white) ;
+  color: var(--text-color);
+}
+
+h1{
+  /* margin-bottom: 1rem; */
+  text-align: center;
+  background-color: var(--primary-color);
+  max-width: 630px;
+  margin: auto;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  color: var(--text-color-white);
+  
+}
+
+main {
+  max-width: 600px;
+  margin: auto;
+  background: var(--background-color);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+label, legend {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+  width: 97%;
+  max-width: 600px;
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+}
+
+select {
+  width: 100%;
+}
+
+textarea {
+  height: 100px;
+}
+
+fieldset {
+  border: none;
+  margin-top: 1rem;
+  padding: 0;
+}
+
+input[type="submit"] {
+  /* margin-top: 1.5rem; */
+  margin: 1rem 2% 1rem 2%;
+  padding: 0.75rem;
+  width: 96%;
+  max-width: 600px;
+  background: var(--primary-color);
+  color: var(--text-color-white);
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background: #80004a;
+}
+
+
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1rem;
+  color:var(--text-color-white);
+  background-color: var(--primary-color);
+  max-width: 630px;
+  margin: auto;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.rating-container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 600px; /* Optional: control total width */
+    margin-top: 10px;
+    margin: auto;
+  }
+
+.rating-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 5px;
+  }
+
+label span {
+  color: var(--text-highlight-color);
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  transform: scale(1.75); /* Increase size by 1.5x */
+  margin: 5px;
+}
+
+
+
+
+

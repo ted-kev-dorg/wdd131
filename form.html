@@ -1,0 +1,63 @@
+<!-- form.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="WDD 131 – Dynamic Web Fundamentals. This page is created by Kevin D. Tetede, showcasing the fundamentals of dynamic web development including HTML, CSS, and JavaScript.">
+  <meta name="author" content="Kevin D. Tetede">
+  <title>Product Review Form</title>
+  <link rel="stylesheet" href="styles/form.css">
+  <script src="scripts/form.js" defer></script>
+</head>
+<body>
+  <h1>Product Review Form</h1>
+  <main>
+    
+    <form action="review.html" method="get" class="reviewForm">
+      <label for="product">Product Name:</label>
+      <select id="product" name="product" required>
+        <option value="" disabled selected>Select a Product ...</option>
+        <!-- options populated by JavaScript -->
+      </select>
+
+      <fieldset>
+        <legend>Overall Rating:</legend>
+        <div class="rating-container">
+        <label class="rating-option">&#9734;<input type="radio" name="rating" id="rating1" value="1" required></label>
+        <label class="rating-option">&#9734;&#9734;<input type="radio" name="rating" id="rating2" value="2" required></label>
+        <label class="rating-option">&#9734;&#9734;&#9734;<input type="radio" name="rating" id="rating3" value="3" required></label>
+        <label class="rating-option">&#9734;&#9734;&#9734;&#9734;<input type="radio" name="rating" id="rating4" value="4" required></label>
+        <label class="rating-option">&#9734;&#9734;&#9734;&#9734;&#9734;<input type="radio" name="rating" id="rating5" value="5" required></label>
+          </div>
+      </fieldset>
+
+      <label for="install-date">Date of Installation:</label>
+      <input type="date" id="install-date" name="install-date" required>
+
+      <fieldset>
+        <legend>What were your favorites features? <br><i>(check all that apply)</i></legend>
+        <label><input type="checkbox" id="feature1" name="features" value="battery"> Battery Life</label>
+        <label><input type="checkbox" id="feature2" name="features" value="interface"> User Interface</label>
+        <label><input type="checkbox" id="feature3" name="features" value="speed"> Processing Speed</label>
+        <label><input type="checkbox" id="feature4" name="features" value="durability"> Durability</label>
+      </fieldset>
+
+      <label for="review">Written Review <span>(optional)</span></label>
+      <textarea id="review" name="review"></textarea>
+
+      <label for="username">Your Name <span>(optional)</span></label>
+      <input type="text" id="username" name="username">
+
+      <input type="submit" value="Review my Product">
+    </form>
+  </main>
+
+  <footer>
+        <p>&copy;<span id="currentyear"></span> Kevin Dorgeles Tetede - Ivory Coast</p>
+        <p id="lastModified"> </p>      
+    </footer>
+
+  
+</body>
+</html>
