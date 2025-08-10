@@ -1,0 +1,86 @@
+/* faq.css */
+
+.faq-page {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.faq-page h1 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.intro-text {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.accordion {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item {
+  border-bottom: 1px solid #eee;
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.accordion-btn {
+  background-color: transparent;
+  color: var(--dark-text);
+  cursor: pointer;
+  padding: 18px 25px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 700;
+  transition: background-color 0.2s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-btn:hover,
+.accordion-btn.active {
+  background-color: var(--light-cream);
+  color: var(--deep-green);
+}
+
+.accordion-btn i {
+  transition: transform 0.3s ease;
+}
+
+.accordion-btn.active i {
+  transform: rotate(180deg);
+}
+
+.accordion-panel {
+  padding: 0 25px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+  background-color: var(--light-cream);
+}
+
+.accordion-panel p {
+  padding: 10px 0 20px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.accordion-panel a {
+  color: var(--warm-gold);
+  text-decoration: underline;
+}
+
+.accordion-panel a:hover {
+  text-decoration: none;
+}

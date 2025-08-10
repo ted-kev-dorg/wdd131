@@ -1,0 +1,185 @@
+/* Large screens - Desktop and tablets */
+@media screen and (min-width: 768px) {
+
+  header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+  }
+
+  .navigation {
+    display: flex !important;  /* show nav as flex on wide screens */
+    flex-direction: row;
+    gap: 25px;
+    width: auto;
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+  }
+
+  #menu {
+    display: none; /* hide hamburger icon on wide screens */
+  }
+
+  .navigation li a {
+    color: var(--dark-text);
+    font-weight: 700;
+    padding: 0;
+  }
+
+  /* Hero text styling */
+  .hero-text {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(30, 86, 49, 0.7);
+    padding: 20px 40px;
+    border-radius: 10px;
+    max-width: 90%;
+    text-align: center;
+    color: white;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  /* Featured products grid - 4 per row on desktop */
+  .product-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Category grid - 4 per row on desktop */
+  .category-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Newsletter form - inline horizontal */
+  #newsletter-form {
+    flex-wrap: nowrap;
+    justify-content: center;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  /* Footer nav - horizontal */
+  footer .footer-nav ul {
+    flex-wrap: nowrap;
+  }
+
+  viewAllCat {
+    align-self: center;
+    font-size: 1.2rem;
+  }
+}
+
+/* Small screens - Mobile */
+@media screen and (max-width: 767px) {
+
+  header {
+    padding: 15px 20px;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  #menu {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 1001;
+  }
+
+  /* Navigation hidden by default */
+  .navigation {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    background-color: var(--deep-green);
+    padding: 10px 0;
+    border-radius: 0 0 10px 10px;
+    margin: auto;
+    
+  }
+  
+
+  /* Show nav when open */
+  .navigation.open {
+    display: flex;
+  }
+
+  .navigation li a {
+    color: white;
+    font-weight: 600;
+    padding: 10px 20px;
+    display: block;
+    text-align: center;
+   
+  }
+
+  /* Hero */
+  .hero {
+    height: 300px;
+    margin-top: 0;
+  }
+
+  .hero-text {
+    position: absolute;
+    background: rgba(30, 86, 49, 0.8);
+    margin: 10px auto 20px auto;
+    padding: 15px 20px;
+    border-radius: 10px;
+    max-width: 90%;
+  }
+
+  .hero-text h1 {
+    font-size: 1.6rem;
+  }
+
+  /* Product grid - vertical scrollable cards */
+  .product-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    overflow-x: hidden;
+  }
+
+  /* Category grid - vertical scrollable cards */
+  .category-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    overflow-x: hidden;
+  }
+
+  /* Newsletter form stacked vertically */
+  #newsletter-form {
+    flex-direction: column;
+    max-width: 90%;
+    margin: 0 auto;
+    gap: 10px;
+  }
+
+  #newsletter-email {
+    width: 100%;
+    max-width: none;
+  }
+
+  /* Footer nav stacked vertically */
+  footer .footer-nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .viewAllCat {
+    width: 100%;
+    text-align: center;
+  }
+}

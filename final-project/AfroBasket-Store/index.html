@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AfroBasket Store</title>
+
+  <link rel="stylesheet" href="../styles/style.css" />
+  <link rel="stylesheet" href="../styles/responsive.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet" />
+  
+  <script src="../scripts/main.js" defer></script>
+  <script src="../scripts/products.js"></script>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo">
+      <img src="../images/icons/final-logo.png" alt="AfroBasket Official Logo" class="afrobasket-logo" />
+    </a>
+    <button id="menu" aria-label="Toggle navigation menu" aria-expanded="false"></button>
+    <nav>
+      <ul class="navigation">
+        <li><a href="./index.html" class="active">Home</a></li>
+        <li><a href="./categories.html">Categories</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+        <li><a href="../AfroBasket-Store/faq.html">FAQs</a></li>
+        <li><a href="./cart.html"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Banner -->
+    <section class="hero" role="region" aria-label="Promotional banner slider">
+      <div class="slider">
+        <img src="../images/banners/banner1.webp" alt="Authentic African Goods" class="slide" loading="lazy" />
+        <img src="../images/banners/banner2.webp" alt="Fresh African Produce" class="slide" loading="lazy" />
+        <img src="../images/banners/banner3.webp" alt="Shop AfroBasket Today" class="slide" loading="lazy" />
+      </div>
+      <button class="arrow left" aria-label="Previous Slide"><i class="fas fa-chevron-left"></i></button>
+      <button class="arrow right" aria-label="Next Slide"><i class="fas fa-chevron-right"></i></button>
+      <div class="hero-text">
+        <h1>Welcome to AfroBasket</h1>
+        <a href="categories.html" class="shop-now-btn" aria-label="Shop Now">
+          <i class="fas fa-shopping-cart"></i> Shop Now
+        </a>
+      </div>
+    </section>
+
+    <!-- Promotions / New Arrivals -->
+    <section class="featured" aria-label="Featured Promotions and New Arrivals">
+      <h2>Featured Promotions & New Arrivals</h2>
+      <div class="product-grid" id="featured-products">
+        <!-- Example product cards, populate dynamically with JS -->
+        <!--
+        <article class="product-card">
+          <img src="..." alt="Product Name" />
+          <h3>Product Name</h3>
+          <p class="price">$Price</p>
+          <a href="#" class="btn view-btn">View Product</a>
+        </article>
+        -->
+      </div>
+      
+    </section>
+
+    <!-- Shop by Category -->
+    <section class="categories" aria-label="Shop by Category">
+      <h2>Shop by Category</h2>
+      <div class="toAllcat-container">
+        
+        <div class="category-grid">
+          <a href="../category/fresh-frozen.html" class="category-card">
+            <img src="../images/categories/fresh.webp" alt="Fresh & Frozen Foods" loading="lazy" />
+            <span>Fresh & Frozen Foods</span>
+          </a>
+          <a href="../category/canned-goods.html" class="category-card">
+            <img src="../images/categories/canned.webp" alt="Canned Goods" loading="lazy" />
+            <span>Canned Goods</span>
+          </a>
+          <a href="../category/beverages.html" class="category-card">
+            <img src="../images/categories/beverages.webp" alt="Beverages" loading="lazy" />
+            <span>Beverages</span>
+          </a>
+          <a href="../category/spices.html" class="category-card">
+            <img src="../images/categories/spices.webp" alt="Spices & Condiments" loading="lazy" />
+            <span>Spices & Condiments</span>
+          </a>       
+        </div>
+        <a href="../AfroBasket-Store/categories.html" class="viewAllCat">
+          <span>All Product Categories</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+        
+      </div>
+      
+    </section>
+
+    <!-- About Us -->
+    <section class="about-us" aria-label="About AfroBasket">
+      <h2>About Us</h2>
+      <p>We celebrate Afrocentric groceries and products to bring the taste of home closer to you.</p>
+      <a href="about.html" class="btn learn-more-btn">Learn More &rarr;</a>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter" aria-label="Newsletter Sign-Up">
+      <h2>Subscribe to Our Newsletter</h2>
+      <form id="newsletter-form">
+        <input
+          type="email"
+          id="newsletter-email"
+          placeholder="Enter your email"
+          aria-label="Email address"
+          required
+        />
+        <button type="submit" class="btn subscribe-btn">Subscribe</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <nav class="footer-nav" aria-label="Footer Navigation">
+      <ul>        
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="https://www.facebook.com/share/1CNboJnB2u/" target="_blank" rel="noopener" aria-label="Facebook">Facebook</a></li>
+        <li><a href="https://x.com/KevinTeted42858" target="_blank" rel="noopener" aria-label="Twitter">Twitter</a></li>
+        <li><a href="https://www.instagram.com/kevindorgeles?utm_source=qr&igsh=aWlrMGFsZGp2Z2U4" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a></li>
+      </ul>
+    </nav>
+    <p>&copy; <span id="currentyear"></span> AfroBasket Store</p>
+    <p id="lastModified"> </p> 
+  </footer>
+</body>
+</html>
