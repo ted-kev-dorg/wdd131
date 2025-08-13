@@ -10,34 +10,39 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet" />
   <script src="../scripts/main.js" defer></script>
   <script src="../scripts/products.js" defer></script>
+  <script src="../scripts/cart.js" defer></script>
 </head>
 <body>
-  <header>
-    <a href="../AfroBasket-Store/index.html" class="logo">
+ <header>
+    <a href="../afrobasket-store/index.html" class="logo">
       <img src="../images/icons/final-logo.png" alt="AfroBasket Official Logo" class="afrobasket-logo" />
     </a>
     <button id="menu" aria-label="Toggle navigation menu" aria-expanded="false"></button>
     <nav>
       <ul class="navigation">
-        <li><a href="../AfroBasket-Store/index.html" class="active">Home</a></li>
-        <li><a href="../AfroBasket-Store/categories.html">Categories</a></li>
-        <li><a href="../AfroBasket-Store/about.html">About</a></li>
-        <li><a href="../AfroBasket-Store/contact.html">Contact</a></li>
+        <li><a href="../afrobasket-store/index.html" class="active">Home</a></li>
+        <li><a href="../afrobasket-store/categories.html">Categories</a></li>
+        <li><a href="../afrobasket-store/about.html">About</a></li>
+        <li><a href="../afrobasket-store/contact.html">Contact</a></li>
         <li><a href="../AfroBasket-Store/faq.html">FAQs</a></li>
-        <li><a href="../AfroBasket-Store/cart.html"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+        <li>
+        <a href="../AfroBasket-Store/cart.html" class="cart-link">
+          <i class="fas fa-shopping-cart"></i> Cart
+          <span class="cart-item-count">0</span>
+        </a>
+      </li>
       </ul>
     </nav>
   </header>
 
   <main class="product-container">
     <section class="category-banner">
-      <h1>Fresh & Frozen Foods</h1>
-      <p>Discover quality fresh and frozen African foods.</p>
+        <h1>Spices & Condiments</h1>
+        <p>The perfect blend of spices and seasonings to bring the authentic taste of Africa to your dishes.</p>
     </section>
-    
-    <section class="product-grid" id="fresh-frozen-products">
+    <section class="product-grid" id="spices-products">
     </section>
-  </main>
+ </main> 
 
   <footer>
     <nav class="footer-nav" aria-label="Footer Navigation">

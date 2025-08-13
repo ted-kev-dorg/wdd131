@@ -141,6 +141,8 @@
   background-color: #e68900;
 }
 
+
+
 @media (max-width: 576px) {
   .cart-item {
     grid-template-columns: 80px 1fr;

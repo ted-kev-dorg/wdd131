@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
         alert('Order submitted successfully!');
         checkoutForm.reset();
         localStorage.removeItem('cart');
-        // Optionally redirect or show confirmation page here
+        
       }
     });
   }

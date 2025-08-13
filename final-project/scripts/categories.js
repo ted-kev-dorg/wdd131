@@ -1,38 +1,3 @@
-/*<a href="../category/baby-kids.html" class="category-card">
-          <img src="../images/categories/baby.webp" alt="Baby & Kids" loading="lazy" />
-          <span>Baby & Kids</span>
-        </a>
-        <a href="../category/health.html" class="category-card">
-          <img src="../images/categories/grains.webp" alt="Grains & Flour" loading="lazy" />
-          <span>Grains & Flour</span>
-        </a>
-        <a href="../category/beauty-care.html" class="category-card">
-          <img src="../images/categories/beauty.webp" alt="Beauty & Care" loading="lazy" />
-          <span>Beauty & Care</span>
-        </a>
-        <a href="../category/home-hygiene.html" class="category-card">
-          <img src="../images/categories/home.webp" alt="Home & Hygiene" loading="lazy" />
-          <span>Home & Hygiene</span>
-        </a>
-        <a href="../category/fresh-frozen.html" class="category-card">
-            <img src="../images/categories/fresh.webp" alt="Fresh & Frozen Foods" loading="lazy" />
-            <span>Fresh & Frozen Foods</span>
-          </a>
-          <a href="../category/canned-goods.html" class="category-card">
-            <img src="../images/categories/canned.webp" alt="Canned Goods" loading="lazy" />
-            <span>Canned Goods</span>
-          </a>
-          <a href="../category/beverages.html" class="category-card">
-            <img src="../images/categories/beverages.webp" alt="Beverages" loading="lazy" />
-            <span>Beverages</span>
-          </a>
-          <a href="../category/spices.html" class="category-card">
-            <img src="../images/categories/spices.webp" alt="Spices & Condiments" loading="lazy" />
-            <span>Spices & Condiments</span>
-          </a>       
-    */
-
-
 const categoriesData = [
   {
     name: "Fresh & Frozen Foods",
@@ -90,7 +55,7 @@ const categoriesData = [
     type: "home",
     url: "../category/home-hygiene.html",
   }
-  // Add other categories as needed
+  
 ];
 
 function renderCategories(filter) {
@@ -113,7 +78,16 @@ function renderCategories(filter) {
 
 // Filtering
 document.addEventListener("click", e => {
+  // Check if the clicked element is one of the filter buttons.
   if (e.target.matches(".filter-buttons button")) {
+    // 1. Remove the 'active' class from all filter buttons.
+    document.querySelectorAll(".filter-buttons button").forEach((btn) => {
+      btn.classList.remove("active");
+    });
+    // 2. Add the 'active' class to the button that was just clicked.
+    e.target.classList.add("active");
+
+    // 3. Trigger the function to re-render the categories based on the filter value.
     renderCategories(e.target.dataset.filter);
   }
 

@@ -124,71 +124,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Sample featured products data
-  const featuredProductsData = [
-  { id: "cassava", name: "Frozen Cassava", price: 6.99, image: "../images/products/cassava.webp" },
-  { id: "tilapia", name: "Whole Tilapia Fish", price: 10.50, image: "../images/products/tilapia.webp" },
-  { id: "yam", name: "Puna Yam", price: 15.00, image: "../images/products/puna-yam.webp" },
-  { id: "okra", name: "Frozen Okra", price: 5.25, image: "../images/products/okra.webp" },
-  ];
-  // const featuredProductsData = [
-  //   {
-  //     name: "African Yam Flour",
-  //     price: 12.99,
-  //     image: "../images/products/yam-flour.webp",
-  //     url: "product-details.html?product=yam-flour"
-  //   },
-  //   {
-  //     name: "Baobab Juice",
-  //     price: 5.99,
-  //     image: "../images/products/baobab-juice.webp",
-  //     url: "product-details.html?product=baobab-juice"
-  //   },
-  //   {
-  //     name: "Shea Butter",
-  //     price: 8.5,
-  //     image: "../images/products/shea-butter.webp",
-  //     url: "product-details.html?product=shea-butter"
-  //   },
-  //   {
-  //     name: "Spiced Tea Blend",
-  //     price: 6.25,
-  //     image: "../images/products/spiced-tea.webp",
-  //     url: "product-details.html?product=spiced-tea"
-  //   }
-  // ];
-
-  // Sample promo products data
-  const promoProductsData = [
-    {
-      name: "Palm Oil",
-      price: 9.99,
-      image: "../images/products/palm-oil.webp",
-      url: "product-details.html?product=palm-oil"
-    },
-    {
-      name: "Coconut Candy",
-      price: 4.5,
-      image: "../images/products/coconut-candy.webp",
-      url: "product-details.html?product=coconut-candy"
-    },
-    {
-      name: "Chili Powder",
-      price: 3.75,
-      image: "../images/products/chili-powder.webp",
-      url: "product-details.html?product=chili-powder"
-    },
-    {
-      name: "Dried Fish",
-      price: 11.0,
-      image: "../images/products/dried-fish.webp",
-      url: "product-details.html?product=dried-fish"
-    }
-  ];
 
   // Render product cards on page load
   renderProductCards("featured-products", featuredProductsData);
-  renderProductCards("promo-products", promoProductsData);
+ 
 
   // Newsletter form handling
   const newsletterForm = document.getElementById("newsletter-form");
@@ -216,19 +155,16 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // --- New and improved logic for Category Pages ---
+  
   function getCategoryKeyFromUrl() {
-    const pathSegments = window.location.pathname.split('/');
-    // The category name is the last part of the path, without the .html extension.
-    // For a path like /category/fresh-frozen.html, this will return "fresh-frozen".
+    const pathSegments = window.location.pathname.split('/');    
     const filename = pathSegments[pathSegments.length - 1];
     return filename.replace('.html', '');
   }
 
   const categoryKey = getCategoryKeyFromUrl();
 
-  // The `allCategoryProducts` object must be defined in products.js and linked in your HTML.
-  // Ensure the keys in this object match the filenames of your category pages (e.g., 'fresh-frozen', 'canned-goods').
+  
   if (categoryKey && allCategoryProducts[categoryKey]) {
     const productsToRender = allCategoryProducts[categoryKey];
     const containerId = `${categoryKey}-products`;
@@ -238,15 +174,13 @@ document.addEventListener("DOMContentLoaded", function () {
       container = document.createElement('div');
       container.id = containerId;
       container.className = 'product-grid';
-      // Find where to append this new container. You might need to adjust this depending on your HTML.
+      // Find where to append this new container. 
       const mainContent = document.querySelector('main');
       mainContent.appendChild(container);
     }
     renderProductCards(containerId, productsToRender);
   }
   // --- End of new logic ---
-
-  // --- All your other existing functions (like renderProductCards, addToCart, etc.) follow here. ---
 
   function renderProductCards(containerId, products) {
     const container = document.getElementById(containerId);
@@ -292,6 +226,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (product) {
         addToCart(product);
         alert(`${product.name} has been added to your cart!`);
+        window.location.reload(); 
       }
     }
   });
@@ -316,4 +251,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
     localStorage.setItem("afrobasketCart", JSON.stringify(cart));
   }
+
 });

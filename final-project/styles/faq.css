@@ -84,3 +84,9 @@
 .accordion-panel a:hover {
   text-decoration: none;
 }
+
+.faq-section{
+  max-width: 900px;
+  margin: auto;
+  margin-top: 2rem;
+}

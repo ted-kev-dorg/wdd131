@@ -15,11 +15,29 @@
   --body-font: 'Roboto', sans-serif;
 }
 
+/* * Sticky Footer Implementation
+ * This makes the body a flex container, and the main content
+ * area grows to push the footer to the bottom of the viewport.
+ */
 body {
   font-family: var(--body-font);
   color: var(--dark-text);
   background-color: var(--light-cream);
   line-height: 1.6;
+
+  /* Start of Sticky Footer Code */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures body takes up at least the full viewport height */
+  /* End of Sticky Footer Code */
+}
+
+/* * This is the key part of the sticky footer.
+ * It tells the main content to grow and fill any available space,
+ * effectively pushing the footer down.
+ */
+main {
+  flex-grow: 1;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -91,7 +109,7 @@ header {
 /* Navigation Menu */
 .navigation {
   list-style: none;
-  display: none;
+  display: none; /* Initially hidden on mobile */
   flex-direction: column;
   gap: 15px;
   width: 100%;
@@ -105,17 +123,27 @@ header {
 }
 
 .navigation li a {
-  color: white;
+  color: var(--light-cream); /* Changed color to light cream */
   text-decoration: none;
   font-weight: 600;
-  padding: 10px 20px;
-  display: block;
+  padding: 12px 24px; /* Increased padding for better aspect ratio */
+  display: block; /* Make the whole area clickable */
+  transition: all 0.3s ease; /* Smooth transition for hover and active states */
+  border-left: 4px solid transparent; /* A subtle left border, initially transparent */
 }
 
-.navigation li a.active,
+/* Style for the active menu item */
+.navigation li a.active {
+  color: var(--warm-gold);
+  border-left-color: var(--warm-gold); /* Highlight the active link with the gold color */
+  background-color: rgba(255, 255, 255, 0.15); /* A more noticeable background highlight */
+}
+
+/* Hover effect for menu items */
 .navigation li a:hover {
-  text-decoration: underline;
-  text-decoration-color: var(--warm-gold);
+  background-color: rgba(255, 255, 255, 0.15); /* More noticeable background on hover */
+  transform: translateX(5px); /* Slide effect on hover */
+  color: var(--warm-gold); /* Change text color to gold on hover */
 }
 
 /* Hero */
@@ -229,6 +257,7 @@ header {
   box-shadow: 0 3px 6px rgb(0 0 0 / 0.1);
   padding: 10px;
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 .product-card img {
@@ -249,6 +278,13 @@ header {
   font-weight: 700;
   color: var(--warm-gold);
   margin-bottom: 10px;
+}
+
+.category-banner {
+  background-color: var(--light-cream);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
 }
 
 .product-card .view-btn {
@@ -277,6 +313,42 @@ header {
 .categories h2 {
   font-family: var(--heading-font);
   margin-bottom: 1.5rem;
+}
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.filter-buttons .btn {
+  background-color: var(--light-cream);
+  color: var(--dark-text);
+  border: 2px solid var(--light-cream);
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.filter-buttons .btn:hover {
+  background-color: #fff;
+  border-color: var(--warm-gold);
+  color: var(--deep-green);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.filter-buttons .btn.active {
+  background-color: var(--deep-green);
+  color: white;
+  border-color: var(--deep-green);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .category-grid {
@@ -313,6 +385,32 @@ header {
 .category-card span {
   font-weight: 700;
   font-size: 1rem;
+}
+
+/* This targets the button inside the category card */
+.category-card .view-btn {
+  /* Use your warm gold color */
+  background-color: var(--warm-gold);
+  color: white; /* White text for contrast */
+  font-weight: 700; /* Bold font weight to stand out */
+  text-transform: uppercase; /* Make text uppercase for a stronger look */
+  letter-spacing: 0.5px; /* Add a little space between letters */
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px; /* Consistent with other rounded corners */
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition for the hover effect */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  width: auto;
+  margin-top: 1rem;
+}
+
+/* Hover effect */
+.category-card .view-btn:hover {
+  background-color: #e68900; 
+  transform: translateY(-2px); 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
 }
 
 /* About Us */
@@ -401,7 +499,7 @@ footer {
   color: white;
   text-align: center;
   padding: 1.5rem 1rem;
-  margin-top: 2rem;
+  /* Removed margin-top to allow it to stick to the bottom */
   font-size: 0.9rem;
 }
 
@@ -460,5 +558,39 @@ footer .footer-nav ul li a:hover {
 .product-container{
   max-width: 90%;
   margin: auto;
- 
+
 }
+
+/* Ensure the cart link is positioned relatively to place the badge correctly */
+.cart-link {
+    position: relative;
+    padding-right: 25px; /* Add some space for the badge */
+}
+
+/* Style the badge to look like a small, circular indicator */
+.cart-item-count {
+    position: absolute;
+    top: -8px; /* Adjust vertical position */
+    right: -12px; /* Adjust horizontal position */
+    background-color: var(--warm-gold); /* Use the warm gold color for visibility */
+    color: var(--deep-green); /* Dark text for contrast */
+    font-size: 0.75rem; /* Small font size for the number */
+    font-weight: 700;
+    border-radius: 50%; /* Makes the element a perfect circle */
+    min-width: 18px; /* Ensures a round shape even with a single digit */
+    height: 18px;
+    display: flex; /* Use flexbox to center the number */
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for depth */
+    transition: transform 0.3s ease; /* A smooth transition for visual effect */
+}
+
+/* Style to hide the badge when the count is 0 */
+.cart-item-count.hidden {
+    display: none;
+}
+
+
+

@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const subtotalElem = document.getElementById("checkout-subtotal");
   const taxElem = document.getElementById("checkout-tax");
   const totalElem = document.getElementById("checkout-total");
-  const TAX_RATE = 0.10;
+  const TAX_RATE = 0.13;
 
   function getCartItems() {
     const cart = JSON.parse(localStorage.getItem("afrobasketCart")) || [];
@@ -43,13 +43,9 @@ document.addEventListener("DOMContentLoaded", function () {
   checkoutForm.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    // In a real application, you'd send this data to a server.
-    // Here, we just simulate a successful transaction.
-
-    // Get form data (optional, for demonstration)
     const formData = new FormData(checkoutForm);
     const shippingDetails = Object.fromEntries(formData.entries());
-    console.log("Order placed with shipping details:", shippingDetails);
+    alert("Order placed with shipping details: " + JSON.stringify(shippingDetails));
 
     // Clear the cart from local storage
     localStorage.removeItem("afrobasketCart");

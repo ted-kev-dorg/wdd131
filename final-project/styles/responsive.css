@@ -23,10 +23,14 @@
   }
 
   .navigation li a {
-    color: var(--dark-text);
-    font-weight: 700;
-    padding: 0;
-  }
+  color: var(--light-cream); /* Changed color to light cream */
+  text-decoration: none;
+  font-weight: 600;
+  padding: 12px 24px; /* Increased padding for better aspect ratio */
+  display: block; /* Make the whole area clickable */
+  transition: all 0.3s ease; /* Smooth transition for hover and active states */
+  border-left: 4px solid transparent; /* A subtle left border, initially transparent */
+}
 
   /* Hero text styling */
   .hero-text {
