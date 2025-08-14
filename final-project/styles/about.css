@@ -39,6 +39,10 @@
   color: var(--dark-text);
 }
 
+.about-text h2{
+  color: var(--deep-green);
+}
+
 .mission-section {
   flex-direction: column-reverse;
 }
@@ -74,6 +78,20 @@
 }
 
 .call-to-action a:hover {
+  background-color: #e68900;
+}
+
+.call-to-action .learn-more-btn {
+  background-color: var(--warm-gold);
+  color: black;
+  padding: 10px 25px;
+  font-weight: 700;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+} */
+
+.learn-more-btn:hover {
   background-color: #e68900;
 }
 

@@ -1,5 +1,16 @@
 /* cart.css */
 
+:root {
+  --deep-green: #072712;
+  --warm-gold: #f9a602;
+  --light-cream: #fff8e1;
+  --dark-text: #222;
+  --pure-white: #ffffff; 
+
+  --heading-font: 'Montserrat', sans-serif;
+  --body-font: 'Roboto', sans-serif;
+}
+
 .cart-page {
   max-width: 900px;
   margin: 2rem auto;
@@ -132,7 +143,7 @@
   font-size: 1.1rem;
   text-decoration: none;
   background-color: var(--warm-gold);
-  color: white;
+  color: var(--dark-text);
   border-radius: 6px;
   transition: background-color 0.3s;
 }

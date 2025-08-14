@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Checkout - AfroBasket</title>
-  <link rel="stylesheet" href="../styles/style.css" />
-  <link rel="stylesheet" href="../styles/responsive.css" />
-  <link rel="stylesheet" href="../styles/checkout.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles/style.css">
+  <link rel="stylesheet" href="../styles/responsive.css">
+  <link rel="stylesheet" href="../styles/checkout.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
   <script src="../scripts/main.js" defer></script>
   <script src="../scripts/checkout.js" defer></script>
 </head>
 <body>
   <header>
     <a href="index.html" class="logo">
-      <img src="../images/icons/final-logo.png" alt="AfroBasket Official Logo" class="afrobasket-logo" />
+      <img src="../images/icons/final-logo.png" alt="AfroBasket Official Logo" class="afrobasket-logo">
     </a>
     <button id="menu" aria-label="Toggle navigation menu" aria-expanded="false"></button>
     <nav>
@@ -26,11 +26,11 @@
         <li><a href="./contact.html">Contact</a></li>
         <li><a href="../AfroBasket-Store/faq.html">FAQs</a></li>
         <li>
-        <a href="../AfroBasket-Store/cart.html" class="cart-link">
-          <i class="fas fa-shopping-cart"></i> Cart
-          <span class="cart-item-count">0</span>
-        </a>
-      </li>
+          <a href="../AfroBasket-Store/cart.html" class="cart-link">
+            <i class="fas fa-shopping-cart"></i> Cart
+            <span class="cart-item-count">0</span>
+          </a>
+        </li>
       </ul>
     </nav>
   </header>
@@ -44,29 +44,28 @@
             <h2>Shipping Information</h2>
             <div class="form-group">
               <label for="full-name">Full Name</label>
-              <input type="text" id="full-name" name="full-name" required />
+              <input type="text" id="full-name" name="full-name" required>
             </div>
             <div class="form-group">
               <label for="email">Email</label>
-              <input type="email" id="email" name="email" required />
+              <input type="email" id="email" name="email" required>
             </div>
             <div class="form-group">
               <label for="address">Address</label>
-              <input type="text" id="address" name="address" required />
+              <input type="text" id="address" name="address" required>
             </div>
             <div class="form-group">
               <label for="city">City</label>
-              <input type="text" id="city" name="city" required />
+              <input type="text" id="city" name="city" required>
             </div>
             <div class="form-group">
               <label for="zip-code">Zip Code</label>
-              <input type="text" id="zip-code" name="zip-code" required />
+              <input type="text" id="zip-code" name="zip-code" required>
             </div>
           </div>
           <div class="order-summary-container">
             <h2>Order Summary</h2>
-            <div id="checkout-summary-list">
-              </div>
+            <div id="checkout-summary-list"></div>
             <div class="summary-details">
               <span>Subtotal:</span>
               <span id="checkout-subtotal">$0.00</span>
@@ -102,9 +101,7 @@
       </ul>
     </nav>
     <p>&copy; <span id="currentyear"></span> AfroBasket Store</p>
-    <p id="lastModified"> </p> 
+    <p id="lastModified"></p> 
   </footer>
-
-  
 </body>
 </html>

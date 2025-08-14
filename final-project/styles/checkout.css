@@ -110,6 +110,8 @@
   font-weight: 700;
 }
 
+
+
 @media (min-width: 768px) {
   #checkout-form {
     flex-direction: row;

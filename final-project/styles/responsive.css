@@ -19,17 +19,17 @@
   }
 
   #menu {
-    display: none; /* hide hamburger icon on wide screens */
+    display: none; 
   }
 
   .navigation li a {
-  color: var(--light-cream); /* Changed color to light cream */
+  color: var(--light-cream); 
   text-decoration: none;
   font-weight: 600;
-  padding: 12px 24px; /* Increased padding for better aspect ratio */
-  display: block; /* Make the whole area clickable */
-  transition: all 0.3s ease; /* Smooth transition for hover and active states */
-  border-left: 4px solid transparent; /* A subtle left border, initially transparent */
+  padding: 12px 24px; 
+  display: block; 
+  transition: all 0.3s ease; 
+  border-left: 4px solid transparent; 
 }
 
   /* Hero text styling */
